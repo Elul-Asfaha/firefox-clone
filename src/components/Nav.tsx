@@ -158,7 +158,7 @@ const Nav = () => {
                         />
                     ))}
                 </div>
-                <button className='max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'>
+                <button className='hidden md:block max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'>
                     Download Firefox
                 </button>
             </div>
