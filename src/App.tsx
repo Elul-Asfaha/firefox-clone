@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 
 const App = () => {
     return (
-        <div>
+        <div className='pb-10'>
             <Nav />
             <Home />
         </div>

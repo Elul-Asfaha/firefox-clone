@@ -1,5 +1,6 @@
 import firstimg from "../assets/firstimg.png";
 import secondimg from "../assets/secondimg.png";
+import dino from "../assets/dino.svg";
 const Home = () => {
     const privacyData = [
         {
@@ -61,7 +62,7 @@ const Home = () => {
                     ))}
                 </div>
             </section>
-            <section className='flex flex-col items-center py-12 gap-3 bg-[#E3F5ED]'>
+            <section className='flex flex-col items-center py-12 gap-3 px-10 bg-[#E3F5ED]'>
                 <p className='max-w-[1000px] text-center text-2xl'>
                     “Mozilla is taking bets to show the world there’s a business
                     to be made with trustworthy AI. That includes putting things
@@ -75,9 +76,13 @@ const Home = () => {
             <section className='flex flex-col items-center justify-center py-12 gap-10'>
                 <div className='w-full max-w-[1200px] flex flex-col md:flex-row gap-10 md:gap-5 px-5'>
                     <div className='flex w-full lg:py-5'>
-                        <img src={firstimg} className='object-cover' />
+                        <img
+                            src={firstimg}
+                            className='object-cover'
+                            loading='lazy'
+                        />
                     </div>
-                    <div className='w-full flex flex-col gap-5 justify-between lg:px-20 lg:py-10'>
+                    <div className='w-full flex flex-col gap-5 justify-center items-center md:items-start lg:px-20 lg:py-10'>
                         <p className='font-bold text-3xl md:text-4xl text-center md:text-normal'>
                             Is Mozilla a corporation or a non-profit? Actually,
                             both.
@@ -88,17 +93,21 @@ const Home = () => {
                             Mozilla Foundation. Which means we aren’t beholden
                             to any shareholders — only to our mission.
                         </p>
-                        <div className='bg-black text-center text-white w-full md:w-fit px-4 py-1 text-lg md:text-xl rounded-md'>
+                        <button className='max-w-fit w-full px-7 py-2 duration-300 border-2 border-black bg-black text-white hover:bg-white hover:text-black rounded-lg font-semibold'>
                             Learn about the Mozilla Foundation
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div className='border-t-2 w-full max-w-[1200px]'></div>
                 <div className='w-full max-w-[1200px] flex flex-col md:flex-row lg:flex-row-reverse gap-10 md:gap-5 px-5'>
                     <div className='flex w-full lg:py-5'>
-                        <img src={secondimg} className='object-cover' />
+                        <img
+                            src={secondimg}
+                            className='object-cover'
+                            loading='lazy'
+                        />
                     </div>
-                    <div className='w-full flex flex-col gap-5 justify-center lg:px-20 lg:py-10'>
+                    <div className='w-full flex flex-col gap-5 justify-center items-center md:items-start lg:px-20 lg:py-10'>
                         <p className='font-bold text-4xl'>
                             Join the fight for a healthy internet
                         </p>
@@ -107,9 +116,120 @@ const Home = () => {
                             literally thousands of ways you can contribute to
                             Mozilla.
                         </p>
-                        <div className='bg-black text-center text-white w-full md:w-fit px-4 py-1 text-lg md:text-xl rounded-md'>
+                        <button className='max-w-fit w-full px-7 py-2 duration-300 border-2 border-black bg-black text-white hover:bg-white hover:text-black rounded-lg font-semibold'>
                             Volunteer with Mozilla
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section className='relative px-5 md:px-10 pb-[100px] flex flex-col justify-center items-center py-12 gap-10 bg-[#F0F0F4]'>
+                <p className='max-w-[1000px] font-bold md:text-center text-3xl md:text-4xl'>
+                    That one time we gave away our source-code…
+                </p>
+                <div className='max-w-[900px] flex flex-col gap-5 text-xl md:text-justify'>
+                    <p>
+                        The Mozilla project was founded in San Francisco in
+                        1998, when the Netscape browser made the radical
+                        decision to give away its program code to the public to
+                        build on and improve. At that time, one company had a
+                        virtual monopoly on how people experienced the internet.
+                    </p>
+                    <p>
+                        Eventually, the open-source Mozilla project morphed into
+                        the wildly popular first version of Firefox.
+                    </p>
+                    <p>
+                        Today, Mozilla continues its movement toward a better
+                        internet with millions of active community members
+                        spanning the globe, advocating for ethical tech,
+                        trustworthy AI and producing privacy-first products that
+                        give more power to the people.
+                    </p>
+                </div>
+                <button className='max-w-fit w-full px-7 py-2 duration-300 border-2 border-black bg-black text-white hover:bg-white hover:text-black rounded-lg font-semibold'>
+                    Learn more about Mozilla
+                </button>
+                <img
+                    src={dino}
+                    className='absolute bottom-0 h-[80px] w-[80px]'
+                />
+            </section>
+            <section className='flex flex-col md:flex-row justify-center py-10 px-8 md:p-20 gap-14 md:gap-20'>
+                <div className='flex flex-col gap-5 w-fit h-full'>
+                    <p className='text-3xl font-bold'>
+                        Get (good) Mozilla news
+                    </p>
+                    <p className='max-w-[420px] text-center md:text-left text-lg'>
+                        Get news and tips from Mozilla to stay safe and informed
+                        on everything that makes the web a healthier place.
+                    </p>
+                </div>
+                <div className='w-fit flex flex-col gap-5 h-full'>
+                    <div className='flex flex-col gap-1'>
+                        <p className='font-bold'>Your email address:</p>
+                        <input
+                            className='border-2 border-gray-300 p-2 rounded-sm active:outline-blue-500 focus:outline-blue-500'
+                            type='email'
+                            placeholder='Yourname@example.com'
+                        />
+                    </div>
+                    <div className='flex flex-col gap-1'>
+                        <p className='font-bold'>Select country or region:</p>
+                        <input
+                            className='border-2 border-gray-300 p-2 rounded-sm active:outline-blue-500 focus:outline-blue-500'
+                            placeholder='Yourname@example.com'
+                        />
+                    </div>
+                    <div className='flex flex-col gap-1'>
+                        <p className='font-bold'>Select language:</p>
+                        <input
+                            className='border-2 border-gray-300 p-2 rounded-sm active:outline-blue-500 focus:outline-blue-500'
+                            placeholder='Yourname@example.com'
+                        />
+                    </div>
+                    <div className='flex flex-col gap-1'>
+                        <p className='font-bold'>Format</p>
+                        <div className='flex gap-5'>
+                            <div className='flex gap-2'>
+                                <input
+                                    type='radio'
+                                    name='format'
+                                    className='border-2 border-gray-300 p-2 rounded-sm active:outline-blue-500 focus:outline-blue-500'
+                                />
+                                <label className='font-bold'>HTML</label>
+                            </div>
+                            <div className='flex gap-2'>
+                                <input
+                                    type='radio'
+                                    name='format'
+                                    className='border-2 border-gray-300 p-2 rounded-sm active:outline-blue-500 focus:outline-blue-500'
+                                />
+                                <label className='font-bold'>Text</label>
+                            </div>
                         </div>
+                    </div>
+                    <div className='flex justify-center items-start gap-2'>
+                        <input
+                            type='checkbox'
+                            className='border-2 my-1 border-gray-300 rounded-sm active:outline-blue-500 focus:outline-blue-500'
+                            placeholder='Yourname@example.com'
+                        />
+                        <p className='font-semibold text-sm'>
+                            I’m okay with Mozilla handling my info as explained
+                            in{" "}
+                            <span className='underline font-semibol text-blue-600'>
+                                this Privacy Notice
+                            </span>
+                        </p>
+                    </div>
+                    <div className='flex flex-col gap-2'>
+                        <button className='w-full px-7 py-2 duration-300 border-2 border-black bg-black text-white hover:bg-white hover:text-black rounded-lg font-semibold'>
+                            Sign Up Now
+                        </button>
+                        <p className='text-[12px] text-center md:text-sm'>
+                            We will only send you Mozilla-related information.
+                        </p>
                     </div>
                 </div>
             </section>
