@@ -1,28 +1,34 @@
 import firstimg from "../assets/firstimg.png";
 import secondimg from "../assets/secondimg.png";
 import dino from "../assets/dino.svg";
+import { ImFirefox } from "react-icons/im";
+
 const Home = () => {
     const privacyData = [
         {
-            icon: "",
+            icon: <ImFirefox />,
             title: "The web’s most intriguing articles",
             link: "Get Firefox",
         },
         {
-            icon: "",
+            icon: <ImFirefox />,
             title: "The web’s most intriguing articles",
             link: "Get Pocket",
         },
         {
-            icon: "",
+            icon: <ImFirefox />,
             title: "Easy-to-use email & phone masks",
             link: "Get Relay",
         },
-        { icon: "", title: "A VPN you can trust", link: "Get Mozilla VPN" },
+        {
+            icon: <ImFirefox />,
+            title: "A VPN you can trust",
+            link: "Get Mozilla VPN",
+        },
     ];
     return (
         <div>
-            <section className='flex flex-col items-center py-20  gap-8'>
+            <section className='flex flex-col items-center py-20  px-3 gap-8'>
                 <p className='max-w-[1000px] text-center text-5xl font-bold'>
                     Mission-driven. People-powered.
                 </p>
@@ -33,7 +39,7 @@ const Home = () => {
                     everyone.
                 </p>
             </section>
-            <section className='flex flex-col items-center py-12 gap-3 bg-[#E3F5ED]'>
+            <section className='flex flex-col items-center py-12 px-3 gap-3 bg-[#E3F5ED]'>
                 <p className='max-w-[800px] text-center text-2xl'>
                     “The health of the internet and online life is why we
                     exist.”
@@ -42,7 +48,7 @@ const Home = () => {
                     Mitchell Baker, Mozilla CEO
                 </p>
             </section>
-            <section className='flex flex-col items-center py-20 gap-16'>
+            <section className='flex flex-col items-center py-20  px-3 gap-16'>
                 <p className='max-w-[1000px] text-center text-4xl font-bold'>
                     Mozilla makes privacy-respecting products
                 </p>
@@ -52,6 +58,7 @@ const Home = () => {
                             key={items.title}
                             className='flex flex-col items-center justify-between gap-3'
                         >
+                            <p className='text-5xl'>{items.icon}</p>
                             <div className='font-bold text-xl text-center max-w-[250px]'>
                                 {items.title}
                             </div>
