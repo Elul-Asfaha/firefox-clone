@@ -22,7 +22,7 @@ const Home = () => {
     ];
     return (
         <div>
-            <section className='flex flex-col items-center py-20 gap-8'>
+            <section className='flex flex-col items-center py-20  gap-8'>
                 <p className='max-w-[1000px] text-center text-5xl font-bold'>
                     Mission-driven. People-powered.
                 </p>
@@ -155,7 +155,7 @@ const Home = () => {
                     className='absolute bottom-0 h-[80px] w-[80px]'
                 />
             </section>
-            <section className='flex flex-col md:flex-row justify-center py-10 px-8 md:p-20 gap-14 md:gap-20'>
+            <section className='flex flex-col md:flex-row justify-center pt-14 pb-20 px-6 md:p-20 gap-14 md:gap-20'>
                 <div className='flex flex-col gap-5 w-fit h-full'>
                     <p className='text-3xl font-bold'>
                         Get (good) Mozilla news
