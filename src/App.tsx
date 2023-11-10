@@ -1,11 +1,13 @@
 import Home from "./components/Home";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 const App = () => {
     return (
-        <div className='pb-10'>
+        <div>
             <Nav />
             <Home />
+            <Footer />
         </div>
     );
 };
