@@ -78,7 +78,7 @@ const Home = () => {
                     <div className='flex w-full lg:py-5'>
                         <img
                             src={firstimg}
-                            className='object-cover'
+                            className='object-cover w-full'
                             loading='lazy'
                         />
                     </div>
@@ -103,7 +103,7 @@ const Home = () => {
                     <div className='flex w-full lg:py-5'>
                         <img
                             src={secondimg}
-                            className='object-cover'
+                            className='object-cover w-full'
                             loading='lazy'
                         />
                     </div>
