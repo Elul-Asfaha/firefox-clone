@@ -137,6 +137,7 @@ const Footer = () => {
                             navs={items.navs}
                             icon1={<AiOutlinePlus />}
                             icon2={<AiOutlineClose />}
+                            nav={false}
                         />
                     ))}
                     <div className='flex flex-col gap-10 md:gap-16'>
