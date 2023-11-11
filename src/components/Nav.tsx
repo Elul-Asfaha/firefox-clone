@@ -14,7 +14,7 @@ const Nav = () => {
                     icons: <ImFirefox />,
                     title: "Firefox for Desktop",
                     desc: "Get the not-for-profit-backed browser on Windows, Mac or Linux",
-                    link: "",
+                    link: "DesktopFireFox",
                 },
                 {
                     icons: <ImFirefox />,
@@ -174,7 +174,7 @@ const Nav = () => {
     ];
     const [toggleNav, setToggleNav] = useState(false);
     return (
-        <div className='shadow-md py-3 px-7 md:px-10 flex flex-col items-center md:flex-row justify-center md:h-[65px] gap-10 md:gap-0'>
+        <div className='shadow-lg py-3 px-7 md:px-10 flex flex-col items-center md:flex-row justify-center md:h-[65px] gap-10 md:gap-0'>
             <div className='relative w-full max-w-[1700px] flex gap-5 justify-between items-center'>
                 <div className='flex items-center gap-5 font-bold'>
                     <div className='text-white px-1 py-1 bg-black text-3xl'>
