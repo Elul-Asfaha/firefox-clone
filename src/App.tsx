@@ -1,7 +1,7 @@
-import Home from "./components/Home";
+import Home from "./Pages/Home";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import DesktopFireFox from "./components/DesktopFireFox";
+import DesktopFireFox from "./Pages/DesktopFireFox";
 import { Route, Routes } from "react-router-dom";
 const App = () => {
     return (

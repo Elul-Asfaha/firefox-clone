@@ -6,9 +6,9 @@ type AccordionType = {
     icon1: ReactNode;
     icon2: ReactNode;
     details?: {
-        icons: ReactNode;
+        icons?: ReactNode;
         title: string;
-        desc: string;
+        desc?: string;
         link?: string;
     }[];
     nav: boolean;
@@ -77,7 +77,7 @@ const Accordion = ({
                                     className='font-semibold hover:underline flex items-center gap-2'
                                 >
                                     <span className='text-2xl'>
-                                        {items.icons}
+                                        {items?.icons}
                                     </span>
                                     {items.title}
                                 </a>
