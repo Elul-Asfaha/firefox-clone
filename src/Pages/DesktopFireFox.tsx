@@ -16,25 +16,27 @@ const DesktopNavs = [
 ];
 const DesktopFireFox = () => {
     return (
-        <div className='flex flex-col gap-5 py-1 pb-5'>
-            <div className='hidden md:flex items-center px-5 text-xl py-1 justify-between bg-[#F9F9FA]'>
-                {DesktopNavs.map((items) => (
-                    <div className='flex justify-between items-center w-full'>
-                        <p>{items.header}</p>
-                        <div className='md:flex text-lg items-center gap-4'>
-                            {items.details.map((items) => (
-                                <a
-                                    href={items.link}
-                                    className='hover:underline'
-                                >
-                                    {items.title}
-                                </a>
-                            ))}
+        <div className='flex flex-col items-center gap-5 py-1 pb-5'>
+            <div className='w-full hidden md:flex justify-center bg-[#F9F9FA]'>
+                <div className='w-full max-w-[1600px] flex items-center px-5 text-xl py-1 justify-between'>
+                    {DesktopNavs.map((items) => (
+                        <div className='flex justify-between items-center w-full'>
+                            <p>{items.header}</p>
+                            <div className='md:flex text-lg items-center gap-4'>
+                                {items.details.map((items) => (
+                                    <a
+                                        href={items.link}
+                                        className='hover:underline'
+                                    >
+                                        {items.title}
+                                    </a>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-            <div className='px-5 pt-[-20px] pb-5 md:hidden bg-[#F9F9FA]'>
+            <div className='w-full px-5 pt-[-20px] pb-5 md:hidden bg-[#F9F9FA]'>
                 {DesktopNavs.map((items) => (
                     <Accordion
                         nav={true}
@@ -47,7 +49,7 @@ const DesktopFireFox = () => {
                 ))}
             </div>
 
-            <div className='grid md:grid-cols-2 gap-5 px-5'>
+            <div className='max-w-[1400px] grid md:grid-cols-2 gap-5 px-5'>
                 <div className='flex flex-col px-2 pe-10 justify-between gap-5'>
                     <div className='flex gap-1 items-center text-3xl text-[#20123A]'>
                         <ImFirefox />
