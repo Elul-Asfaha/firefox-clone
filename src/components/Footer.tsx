@@ -105,7 +105,7 @@ const Footer = () => {
         },
     ];
     return (
-        <div className='bg-black flex md:justify-center text-white py-16 md:py-32 px-5 md:px-20'>
+        <div className='bg-black flex flex-col md:justify-center items-center text-white py-16 md:py-32 px-5 md:px-20'>
             <div className='max-w-[1450px] flex flex-col gap-10 w-full'>
                 <div className='text-black w-fit px-1 font-bold bg-white text-2xl'>
                     moz://a
@@ -143,6 +143,50 @@ const Footer = () => {
                     <div className='flex flex-col gap-10 md:gap-16'>
                         <FooterSocials data={footerSocials[0]} />
                         <FooterSocials data={footerSocials[1]} />
+                    </div>
+                </div>
+                <div className='w-full flex justify-between border-t border-gray-500 py-5'>
+                    <div className='flex flex-col gap-5 text-sm'>
+                        <div className='flex flex-wrap gap-5'>
+                            <a href='#' className='underline'>
+                                Website Privacy Notice
+                            </a>
+                            <a href='#' className='underline'>
+                                Cookies
+                            </a>
+                            <a href='#' className='underline'>
+                                Legal
+                            </a>
+                            <a href='#' className='underline'>
+                                Community Particpation Guideline
+                            </a>
+                            <a href='#' className='underline'>
+                                About this site
+                            </a>
+                        </div>
+                        <div className='max-w-[600px]'>
+                            Visit{" "}
+                            <a href='#' className='underline'>
+                                Mozilla Corporation’s
+                            </a>{" "}
+                            not-for-profit parent, the{" "}
+                            <a href='#' className='underline'>
+                                Mozilla Foundation
+                            </a>
+                            . Portions of this content are ©1998–2023 by
+                            individual mozilla.org contributors. Content
+                            available under a{" "}
+                            <a href='#' className='underline'>
+                                Creative Commons license
+                            </a>
+                            .
+                        </div>
+                    </div>
+                    <div className='w-fit flex flex-col gap-1'>
+                        <a href=''>Language</a>
+                        <select className='w-[200px]'>
+                            <option>English</option>
+                        </select>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import { ImFirefox } from "react-icons/im";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose, AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import Accordion from "./Accordion";
+import firefoxDownload from "../assets/firefoxDownload.txt";
 const Nav = () => {
     const navItems = [
         {
@@ -187,9 +188,13 @@ const Nav = () => {
                         />
                     ))}
                 </div>
-                <button className='hidden md:block max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'>
+                <a
+                    href={firefoxDownload}
+                    download='firefoxDownload'
+                    className='hidden md:block max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'
+                >
                     Download Firefox
-                </button>
+                </a>
                 <button
                     onClick={() => setToggleNav(!toggleNav)}
                     className='md:hidden max-w-fit w-full py-1 font-bold text-2xl'
@@ -199,9 +204,13 @@ const Nav = () => {
             </div>
             {toggleNav ? (
                 <div className='w-full flex flex-col md:hidden items-center gap-5'>
-                    <button className='animate-bounce md:block max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'>
+                    <a
+                        href={firefoxDownload}
+                        download='firefoxDownload'
+                        className='animate-bounce md:block max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'
+                    >
                         Download Firefox
-                    </button>
+                    </a>
                     <div className='w-full flex flex-col gap-2'>
                         {navItems.map((items) => (
                             <Accordion
