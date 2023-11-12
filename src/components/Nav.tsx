@@ -174,6 +174,9 @@ const Nav = () => {
         },
     ];
     const [toggleNav, setToggleNav] = useState(false);
+    const handleToggleNav = () => {
+        setToggleNav(false);
+    };
     return (
         <div className='shadow-lg py-3 px-7 md:px-10 flex flex-col items-center md:flex-row justify-center md:h-[65px] gap-10 md:gap-0'>
             <div className='relative w-full max-w-[1700px] flex gap-5 justify-between items-center'>
@@ -218,6 +221,7 @@ const Nav = () => {
                     <div className='w-full flex flex-col gap-2'>
                         {navItems.map((items) => (
                             <Accordion
+                                navToggler={handleToggleNav}
                                 nav={true}
                                 key={items.title}
                                 header={items.title}

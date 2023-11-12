@@ -66,27 +66,27 @@ const Footer = ({ dark }: footerType) => {
             socials: [
                 {
                     icon: <AiOutlineInstagram />,
-                    link: "",
+                    link: "instagram.com/a",
                 },
                 {
                     icon: <AiOutlineLinkedin />,
-                    link: "",
+                    link: "linkedin.com/a",
                 },
                 {
                     icon: <AiOutlineYoutube />,
-                    link: "",
+                    link: "youtube.com/a",
                 },
                 {
                     icon: <PiSpotifyLogoBold />,
-                    link: "",
+                    link: "shopify.com/a",
                 },
                 {
                     icon: <FaTiktok />,
-                    link: "",
+                    link: "tiktok.com/a",
                 },
                 {
                     icon: <BsTwitter />,
-                    link: "",
+                    link: "twitter.com/a",
                 },
             ],
         },
@@ -95,15 +95,15 @@ const Footer = ({ dark }: footerType) => {
             socials: [
                 {
                     icon: <BsTwitter />,
-                    link: "",
+                    link: "twitter.com/b",
                 },
                 {
                     icon: <AiOutlineInstagram />,
-                    link: "",
+                    link: "instagram.com/b",
                 },
                 {
                     icon: <AiOutlineYoutube />,
-                    link: "",
+                    link: "youtube.com/b",
                 },
             ],
         },
