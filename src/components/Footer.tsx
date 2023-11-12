@@ -10,7 +10,11 @@ import { PiSpotifyLogoBold } from "react-icons/pi";
 import { FaTiktok } from "react-icons/fa";
 import FooterSocials from "./FooterSocials";
 import Accordion from "./Accordion";
-const Footer = () => {
+import { Link } from "react-router-dom";
+type footerType = {
+    dark: boolean;
+};
+const Footer = ({ dark }: footerType) => {
     const footerNavLinks = [
         {
             header: "Company",
@@ -105,11 +109,20 @@ const Footer = () => {
         },
     ];
     return (
-        <div className='bg-black flex flex-col md:justify-center items-center text-white py-16 md:py-32 px-5 md:px-20'>
+        <div
+            className={`${
+                dark ? "bg-black text-white" : "bg-[#F9F9FA] text-black"
+            } flex flex-col md:justify-center items-center py-16 md:py-32 px-5 w-full`}
+        >
             <div className='max-w-[1450px] flex flex-col gap-10 w-full'>
-                <div className='text-black w-fit px-1 font-bold bg-white text-2xl'>
+                <Link
+                    to='/'
+                    className={`${
+                        dark ? "bg-white text-black" : "text-white bg-black"
+                    } w-fit px-1 font-bold text-2xl`}
+                >
                     moz://a
-                </div>
+                </Link>
                 <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-16'>
                     {footerNavLinks.map((items) => (
                         <div
@@ -117,7 +130,11 @@ const Footer = () => {
                             className='hidden md:flex flex-col gap-4'
                         >
                             <p className='font-bold'>{items.header}</p>
-                            <div className='flex flex-col gap-3'>
+                            <div
+                                className={`${
+                                    dark ? "" : "text-gray-600"
+                                } flex flex-col gap-3`}
+                            >
                                 {items.navs.map((items) => (
                                     <a
                                         href={items.link}
@@ -145,7 +162,11 @@ const Footer = () => {
                         <FooterSocials data={footerSocials[1]} />
                     </div>
                 </div>
-                <div className='w-full flex justify-between border-t border-gray-500 py-5'>
+                <div
+                    className={`${
+                        dark ? "" : "text-gray-600"
+                    } w-full flex justify-between border-t border-gray-500 py-5`}
+                >
                     <div className='flex flex-col gap-5 text-sm'>
                         <div className='flex flex-wrap gap-5'>
                             <a href='#' className='underline'>
@@ -182,8 +203,10 @@ const Footer = () => {
                             .
                         </div>
                     </div>
-                    <div className='w-fit flex flex-col gap-1'>
-                        <a href=''>Language</a>
+                    <div className='w-fit flex flex-col gap-2'>
+                        <a href='' className='underline'>
+                            Language
+                        </a>
                         <select className='w-[200px]'>
                             <option>English</option>
                         </select>

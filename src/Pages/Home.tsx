@@ -2,6 +2,7 @@ import firstimg from "../assets/firstimg.png";
 import secondimg from "../assets/secondimg.png";
 import dino from "../assets/dino.svg";
 import { ImFirefox } from "react-icons/im";
+import Footer from "../components/Footer";
 
 const Home = () => {
     const privacyData = [
@@ -240,6 +241,7 @@ const Home = () => {
                     </div>
                 </form>
             </section>
+            <Footer dark={true} />
         </div>
     );
 };

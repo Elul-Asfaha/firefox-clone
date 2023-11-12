@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose, AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import Accordion from "./Accordion";
 import firefoxDownload from "../assets/firefoxDownload.txt";
+import { Link } from "react-router-dom";
 const Nav = () => {
     const navItems = [
         {
@@ -177,9 +178,12 @@ const Nav = () => {
         <div className='shadow-lg py-3 px-7 md:px-10 flex flex-col items-center md:flex-row justify-center md:h-[65px] gap-10 md:gap-0'>
             <div className='relative w-full max-w-[1700px] flex gap-5 justify-between items-center'>
                 <div className='flex items-center gap-5 font-bold'>
-                    <div className='text-white px-1 py-1 bg-black text-3xl'>
+                    <Link
+                        to='/'
+                        className='text-white px-1 py-1 bg-black text-3xl'
+                    >
                         moz://a
-                    </div>
+                    </Link>
                     {navItems.map((items) => (
                         <NavItems
                             key={items.title}
