@@ -7,7 +7,7 @@ type PromptType = {
 };
 export const Prompt = ({ promptHandler }: PromptType) => {
     return (
-        <div className='fixed bottom-5 flex flex-col z-50 right-5 gap-5 w-[310px] rounded-md pb-10 bg-purple-950 text-white'>
+        <div className='hidden fixed bottom-5 md:flex flex-col z-50 right-5 gap-5 w-[310px] rounded-md pb-10 bg-purple-950 text-white'>
             <div className='flex justify-end py-2 px-3'>
                 <button onClick={promptHandler} className='font-bold text-2xl'>
                     <AiOutlineClose />
