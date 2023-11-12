@@ -2,12 +2,13 @@ import firstimg from "../assets/firstimg.png";
 import secondimg from "../assets/secondimg.png";
 import dino from "../assets/dino.svg";
 import { ImFirefox } from "react-icons/im";
+import Footer from "../components/Footer";
 
 const Home = () => {
     const privacyData = [
         {
             icon: <ImFirefox />,
-            title: "The web’s most intriguing articles",
+            title: "Private & secure browsing",
             link: "Get Firefox",
         },
         {
@@ -172,7 +173,7 @@ const Home = () => {
                         on everything that makes the web a healthier place.
                     </p>
                 </div>
-                <div className='w-fit flex flex-col gap-5 h-full'>
+                <form className='w-fit flex flex-col gap-5 h-full'>
                     <div className='flex flex-col gap-1'>
                         <p className='font-bold'>Your email address:</p>
                         <input
@@ -238,8 +239,9 @@ const Home = () => {
                             We will only send you Mozilla-related information.
                         </p>
                     </div>
-                </div>
+                </form>
             </section>
+            <Footer dark={true} />
         </div>
     );
 };
