@@ -9,19 +9,11 @@ import { GiLaptop } from "react-icons/gi";
 import { FaShieldAlt } from "react-icons/fa";
 import { TbNotes } from "react-icons/tb";
 import Footer from "../components/Footer";
-const DesktopNavs = [
-    {
-        header: "Firefox for Desktop",
-        details: [
-            { title: "Features", link: "" },
-            { title: "Support", link: "" },
-            { title: "Add-ons", link: "" },
-            { title: " All Languages", link: "" },
-        ],
-    },
-];
+import { DesktopNavs, browserFeatures } from "../config/DesktopPageConfig";
 const DesktopFireFox = () => {
     const [openPrompt, setOpenPrompt] = useState(true);
+    const [compareBrowser, setComapreBrowser] = useState(browserFeatures[1]);
+    console.log(compareBrowser.title);
     return (
         <div className='flex flex-col items-center gap-5 py-1 pb-5'>
             {openPrompt ? (
@@ -46,7 +38,7 @@ const DesktopFireFox = () => {
                     ))}
                 </div>
             </div>
-            <div className='w-full px-5 pt-[-20px] pb-5 md:hidden bg-[#F9F9FA]'>
+            <div className='w-full px-5 pt-[-20px] py-2 md:hidden bg-[#F9F9FA]'>
                 {DesktopNavs.map((items) => (
                     <Accordion
                         nav={true}
@@ -59,7 +51,7 @@ const DesktopFireFox = () => {
                 ))}
             </div>
 
-            <div className='max-w-[1400px] grid md:grid-cols-2 gap-5 px-5'>
+            <div className='max-w-[1400px] grid md:grid-cols-2 gap-5 px-8 py-3 md:py-0'>
                 <div className='flex flex-col md:pe-10 justify-between gap-10'>
                     <div className='flex gap-1 items-center text-4xl text-[#20123A]'>
                         <ImFirefox />
@@ -157,6 +149,61 @@ const DesktopFireFox = () => {
                     See Release Notes
                 </a>
             </div>
+            <section className='px-5'>
+                <p className='text-[#20123A] py-5 text-center text-3xl font-bold'>
+                    Do what you do online. Firefox Browser isn’t watching.
+                </p>
+                <div className='grid md:grid-cols-2'>
+                    <div className='flex flex-col gap-4'>
+                        <p className='text-[#20123A] text-xl font-bold'>
+                            How Firefox compares to other browsers
+                        </p>
+                        <p>
+                            Get all the speed and tools with none of the
+                            invasions of privacy. Firefox Browser collects so
+                            little data about you, we don’t even require your
+                            email address to download. That’s because unlike
+                            other browsers, we have no financial stake in
+                            following you around the web.
+                        </p>
+                        <a
+                            href=''
+                            className='pt-2 text-blue-500 font-bold underline'
+                        >
+                            How we compare to other browsers
+                        </a>
+                    </div>
+                    <div>
+                        <div className='rounded-lg shadow-lg'></div>
+                        <div className='flexw-fit items-center'>
+                            <button
+                                className='px-3 py-1 border shadow-lg '
+                                onClick={() =>
+                                    setComapreBrowser(browserFeatures[1])
+                                }
+                            >
+                                Chrome
+                            </button>
+                            <button
+                                className='px-3 py-1 border shadow-lg '
+                                onClick={() =>
+                                    setComapreBrowser(browserFeatures[2])
+                                }
+                            >
+                                Edge
+                            </button>
+                            <button
+                                className='px-3 py-1 border shadow-lg '
+                                onClick={() =>
+                                    setComapreBrowser(browserFeatures[3])
+                                }
+                            >
+                                Safari
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <Footer dark={false} />
         </div>
     );

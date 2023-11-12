@@ -1,32 +1,10 @@
 import firstimg from "../assets/firstimg.png";
 import secondimg from "../assets/secondimg.png";
 import dino from "../assets/dino.svg";
-import { ImFirefox } from "react-icons/im";
 import Footer from "../components/Footer";
+import { privacyData } from "../config/HomePageConfig";
 
 const Home = () => {
-    const privacyData = [
-        {
-            icon: <ImFirefox />,
-            title: "Private & secure browsing",
-            link: "Get Firefox",
-        },
-        {
-            icon: <ImFirefox />,
-            title: "The web’s most intriguing articles",
-            link: "Get Pocket",
-        },
-        {
-            icon: <ImFirefox />,
-            title: "Easy-to-use email & phone masks",
-            link: "Get Relay",
-        },
-        {
-            icon: <ImFirefox />,
-            title: "A VPN you can trust",
-            link: "Get Mozilla VPN",
-        },
-    ];
     return (
         <div>
             <section className='flex flex-col items-center py-20  px-3 gap-8'>
