@@ -1,4 +1,5 @@
 import { ReactNode, useState } from "react";
+import { Link } from "react-router-dom";
 
 type AccordionType = {
     header: string;
@@ -9,8 +10,9 @@ type AccordionType = {
         icons?: ReactNode;
         title: string;
         desc?: string;
-        link?: string;
+        link: string;
     }[];
+    navToggler?: () => void;
     nav: boolean;
 };
 const Accordion = ({
@@ -20,6 +22,7 @@ const Accordion = ({
     navs,
     details,
     nav,
+    navToggler,
 }: AccordionType) => {
     const [toggleAccordion, setToggleAccordion] = useState(false);
     return (
@@ -71,16 +74,18 @@ const Accordion = ({
                             }`}
                         >
                             {details?.map((items) => (
-                                <a
-                                    href={items.link}
-                                    key={items.title}
-                                    className='font-semibold hover:underline flex items-center gap-2'
-                                >
-                                    <span className='text-2xl'>
-                                        {items?.icons}
-                                    </span>
-                                    {items.title}
-                                </a>
+                                <div onClick={navToggler}>
+                                    <Link
+                                        to={items?.link}
+                                        key={items.link}
+                                        className='font-semibold hover:underline flex items-center gap-2'
+                                    >
+                                        <span className='text-2xl'>
+                                            {items?.icons}
+                                        </span>
+                                        {items.title}
+                                    </Link>
+                                </div>
                             ))}
                         </div>
                     </div>
