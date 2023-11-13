@@ -1,32 +1,10 @@
 import firstimg from "../assets/firstimg.png";
 import secondimg from "../assets/secondimg.png";
 import dino from "../assets/dino.svg";
-import { ImFirefox } from "react-icons/im";
 import Footer from "../components/Footer";
+import { privacyData } from "../config/HomePageConfig";
 
 const Home = () => {
-    const privacyData = [
-        {
-            icon: <ImFirefox />,
-            title: "Private & secure browsing",
-            link: "Get Firefox",
-        },
-        {
-            icon: <ImFirefox />,
-            title: "The web’s most intriguing articles",
-            link: "Get Pocket",
-        },
-        {
-            icon: <ImFirefox />,
-            title: "Easy-to-use email & phone masks",
-            link: "Get Relay",
-        },
-        {
-            icon: <ImFirefox />,
-            title: "A VPN you can trust",
-            link: "Get Mozilla VPN",
-        },
-    ];
     return (
         <div>
             <section className='flex flex-col items-center py-20  px-3 gap-8'>
@@ -53,11 +31,11 @@ const Home = () => {
                 <p className='max-w-[1000px] text-center text-4xl font-bold'>
                     Mozilla makes privacy-respecting products
                 </p>
-                <div className='grid md:grid-cols-2 xl:flex xl:justify-center gap-5 w-full'>
+                <div className='grid md:grid-cols-2  xl:flex xl:justify-center gap-10 md:gap-5 w-full'>
                     {privacyData.map((items) => (
                         <div
                             key={items.title}
-                            className='flex flex-col items-center justify-between gap-3'
+                            className='flex flex-col items-center justify-between gap-5'
                         >
                             <p className='text-5xl'>{items.icon}</p>
                             <div className='font-bold text-xl text-center max-w-[250px]'>
