@@ -9,9 +9,13 @@ import { GiLaptop } from "react-icons/gi";
 import { FaShieldAlt } from "react-icons/fa";
 import { TbNotes } from "react-icons/tb";
 import Footer from "../components/Footer";
-import { BsCheck2 } from "react-icons/bs";
+import { BsApple, BsCheck2 } from "react-icons/bs";
 import { DesktopNavs, browserFeatures } from "../config/DesktopPageConfig";
 import { BsDashLg } from "react-icons/bs";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
+import AdBlockDesptop from "../assets/AdBlockDesktop.jpg";
+import AllDevice from "../assets/AllDevice.jpg";
+import everyplatform from "../assets/everyplatform.svg";
 const DesktopFireFox = () => {
     const [openPrompt, setOpenPrompt] = useState(true);
     const [compareBrowser, setComapreBrowser] = useState(browserFeatures[1]);
@@ -155,12 +159,12 @@ const DesktopFireFox = () => {
                 <p className='text-[#20123A] max-w-[600px] py-5 text-center text-3xl md:text-4xl font-bold'>
                     Do what you do online. Firefox Browser isn’t watching.
                 </p>
-                <div className='grid md:grid-cols-2 max-w-[1000px] gap-5'>
+                <div className='grid md:grid-cols-2 max-w-[1200px] gap-5 md:gap-14'>
                     <div className='flex flex-col justify-center gap-4'>
                         <p className='text-[#20123A] text-3xl font-bold'>
                             How Firefox compares to other browsers
                         </p>
-                        <p>
+                        <p className='text-lg text-gray-600'>
                             Get all the speed and tools with none of the
                             invasions of privacy. Firefox Browser collects so
                             little data about you, we don’t even require your
@@ -178,24 +182,24 @@ const DesktopFireFox = () => {
 
                     <div className='flex flex-col items-center gap-5'>
                         <div className='rounded-lg shadow-lg w-fit bg-white p-5'>
-                            <div className='flex items-center px-3 py-2 even:bg-slate-100'>
+                            <div className='flex items-center px-3 py-1 even:bg-[#F9F9FA]'>
                                 <div className='w-full'></div>
-                                <div className='w-full max-w-fit text-3xl py-3 px-5 text-center'>
+                                <div className='w-full max-w-fit text-3xl py-4 px-5 text-center'>
                                     {browserFeatures[0].icon}
                                 </div>
-                                <div className='w-full max-w-fit text-3xl py-3 px-5 text-center'>
+                                <div className='w-full max-w-fit text-3xl py-4 px-5 text-center'>
                                     {compareBrowser.icon}
                                 </div>
                             </div>
                             {browserFeatures[0].features.map((items) => (
                                 <div
                                     key={items.featureName}
-                                    className='flex items-center px-3 py-2 even:bg-slate-100'
+                                    className='flex items-center px-3 border-t py-1 even:bg-[#F9F9FA]'
                                 >
                                     <div className='w-full'>
                                         {items.featureName}
                                     </div>
-                                    <div className='w-full max-w-fit text-green-600 text-3xl py-3 px-5 text-center'>
+                                    <div className='w-full max-w-fit text-green-600 text-3xl py-1 px-5 text-center'>
                                         <BsCheck2 />
                                     </div>
                                     <div>
@@ -203,11 +207,11 @@ const DesktopFireFox = () => {
                                             item.featureName ===
                                             items.featureName ? (
                                                 item.feature ? (
-                                                    <div className='w-full max-w-fit text-green-600 text-3xl py-3 px-5 text-center'>
+                                                    <div className='w-full max-w-fit text-green-600 text-3xl py-1 px-5 text-center'>
                                                         <BsCheck2 />
                                                     </div>
                                                 ) : (
-                                                    <div className='w-full max-w-fit text-gray-500 text-3xl py-3 px-5 text-center'>
+                                                    <div className='w-full max-w-fit text-gray-500 text-3xl py-1 px-5 text-center'>
                                                         <BsDashLg />
                                                     </div>
                                                 )
@@ -254,6 +258,102 @@ const DesktopFireFox = () => {
                             >
                                 Safari
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className='flex flex-col py-20'>
+                <div className='max-w-[1000px] flex flex-col items-center gap-24'>
+                    <div className='flex flex-col-reverse md:flex-row md:even:flex-row-reverse px-5 gap-10'>
+                        <div className='flex w-full flex-1'>
+                            <img
+                                src={AdBlockDesptop}
+                                className='object-cover'
+                            />
+                        </div>
+                        <div className='flex-1 flex flex-col py-10 justify-center gap-5'>
+                            <p className='text-3xl text-[#20123A] font-bold'>
+                                We block the ad trackers. You explore the
+                                internet faster.
+                            </p>
+                            <p className='text-lg text-gray-600'>
+                                Ads are distracting and make web pages load
+                                slower while their trackers watch every move you
+                                make online. The Firefox Browser blocks most
+                                trackers automatically, so there’s no need to
+                                dig into your security settings.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='flex flex-col-reverse md:flex-row md:even:flex-row-reverse px-5 gap-10'>
+                        <div className='flex w-full flex-1'>
+                            <img
+                                src={everyplatform}
+                                className='object-cover w-full'
+                            />
+                        </div>
+                        <div className='flex-1 flex flex-col justify-center gap-5'>
+                            <p className='text-3xl text-[#20123A] font-bold'>
+                                Firefox is for everyone
+                            </p>
+                            <p className='text-lg text-gray-600'>
+                                Available in over 90 languages, and compatible
+                                with Windows, Mac and Linux machines, Firefox
+                                works no matter what you’re using or where you
+                                are. Make sure your operating system is up to
+                                date for the best experience.
+                            </p>
+                            <a
+                                href=''
+                                className='pt-2 text-blue-500 font-bold underline'
+                            >
+                                Review system requirements
+                            </a>
+                        </div>
+                    </div>
+                    <div className='flex flex-col-reverse md:flex-row md:even:flex-row-reverse px-5 gap-10'>
+                        <div className='flex w-full flex-1'>
+                            <img src={AllDevice} className='object-cover' />
+                        </div>
+                        <div className='flex-1 flex flex-col justify-center gap-5'>
+                            <p className='text-3xl text-[#20123A] font-bold'>
+                                Put Firefox on all your devices
+                            </p>
+                            <p className='text-lg text-gray-600'>
+                                Take your privacy with you everywhere. Firefox
+                                Browsers for iOS and Android have the same
+                                strong privacy settings to block trackers from
+                                following you around the web, no matter where
+                                you are.
+                            </p>
+                            <div className='flex  gap-5'>
+                                <a
+                                    href='#'
+                                    className='flex px-2 rounded-md py-[2px] items-center gap-2 bg-black text-white'
+                                >
+                                    <div className='text-2xl'>
+                                        <IoLogoGooglePlaystore />
+                                    </div>
+                                    <div className='flex flex-col justify-between'>
+                                        <p className='text-[10px]'>GET IT ON</p>
+                                        <p>Google Play</p>
+                                    </div>
+                                </a>
+                                <a
+                                    href='#'
+                                    className='flex px-2 rounded-md py-[2px] items-center gap-2 bg-black text-white'
+                                >
+                                    <div className='text-2xl'>
+                                        <BsApple />
+                                    </div>
+                                    <div className='flex flex-col justify-between'>
+                                        <p className='text-[10px]'>
+                                            Download on the
+                                        </p>
+                                        <p>App Store</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
