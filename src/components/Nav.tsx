@@ -1,11 +1,8 @@
 import { useState } from "react";
-import NavItems from "./NavItems";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineClose, AiOutlineDown, AiOutlineUp } from "react-icons/ai";
-import Accordion from "./Accordion";
-import firefoxDownload from "../assets/firefoxDownload.txt";
 import { Link } from "react-router-dom";
+import { NavItems, Accordion } from "./index";
 import { navItems } from "../config/NavConfig";
+import { Icons, FireFoxDownload } from "../assets/index";
 const Nav = () => {
     const [toggleNav, setToggleNav] = useState(false);
     const handleToggleNav = () => {
@@ -30,7 +27,7 @@ const Nav = () => {
                     ))}
                 </div>
                 <a
-                    href={firefoxDownload}
+                    href={FireFoxDownload}
                     download='firefoxDownload'
                     className='hidden md:block max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'
                 >
@@ -40,13 +37,13 @@ const Nav = () => {
                     onClick={() => setToggleNav(!toggleNav)}
                     className='md:hidden max-w-fit w-full py-1 font-bold text-2xl'
                 >
-                    {!toggleNav ? <RxHamburgerMenu /> : <AiOutlineClose />}
+                    {!toggleNav ? Icons.RxHamburgerMenu : Icons.AiOutlineClose}
                 </button>
             </div>
             {toggleNav ? (
                 <div className='w-full flex flex-col md:hidden items-center gap-5'>
                     <a
-                        href={firefoxDownload}
+                        href={FireFoxDownload}
                         download='firefoxDownload'
                         className='animate-bounce md:block max-w-fit w-full px-5 py-1 duration-300 border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white rounded-lg font-semibold'
                     >
@@ -60,8 +57,8 @@ const Nav = () => {
                                 key={items.title}
                                 header={items.title}
                                 details={items.details}
-                                icon1={<AiOutlineDown />}
-                                icon2={<AiOutlineUp />}
+                                icon1={Icons.AiOutlineDown}
+                                icon2={Icons.AiOutlineUp}
                             />
                         ))}
                     </div>

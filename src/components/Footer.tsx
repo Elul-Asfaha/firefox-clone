@@ -1,8 +1,7 @@
-import FooterSocials from "./FooterSocials";
-import Accordion from "./Accordion";
+import { FooterSocials, Accordion } from "./index";
 import { Link } from "react-router-dom";
 import { footerNavLinks, footerSocials } from "../config/FooterConfig";
-import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
+import { Icons } from "../assets/index";
 type footerType = {
     dark: boolean;
 };
@@ -51,8 +50,8 @@ const Footer = ({ dark }: footerType) => {
                             key={items.header}
                             header={items.header}
                             navs={items.navs}
-                            icon1={<AiOutlinePlus />}
-                            icon2={<AiOutlineClose />}
+                            icon1={Icons.AiOutlinePlus}
+                            icon2={Icons.AiOutlineClose}
                             nav={false}
                         />
                     ))}

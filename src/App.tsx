@@ -1,8 +1,7 @@
 import Home from "./Pages/Home";
-import Nav from "./components/Nav";
 import { Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import Loading from "./components/Loading";
+import { Loading, Nav } from "./components/index";
 const DesktopFireFox = lazy(() => import("./Pages/DesktopFireFox"));
 const App = () => {
     return (
