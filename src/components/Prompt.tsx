@@ -1,7 +1,5 @@
-import { AiOutlineClose } from "react-icons/ai";
-import { ImFirefox } from "react-icons/im";
+import { Icons } from "../assets/index";
 import firefoxDownload from "../assets/firefoxDownload.txt";
-
 type PromptType = {
     promptHandler: () => void;
 };
@@ -10,11 +8,11 @@ export const Prompt = ({ promptHandler }: PromptType) => {
         <div className='hidden fixed bottom-5 md:flex flex-col z-50 right-5 gap-5 w-[310px] rounded-md pb-10 bg-purple-950 text-white'>
             <div className='flex justify-end py-2 px-3'>
                 <button onClick={promptHandler} className='font-bold text-2xl'>
-                    <AiOutlineClose />
+                    {Icons.AiOutlineClose}
                 </button>
             </div>
             <div className='flex gap-1 px-5 items-center text-2xl'>
-                <ImFirefox />
+                {Icons.ImFirefox}
                 <p>
                     <span className='font-semibold'>FireFox</span> Browser
                 </p>

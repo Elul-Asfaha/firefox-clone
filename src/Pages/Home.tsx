@@ -1,6 +1,4 @@
-import firstimg from "../assets/firstimg.png";
-import secondimg from "../assets/secondimg.png";
-import dino from "../assets/dino.svg";
+import { Firstimg, Dino, Secondimg } from "../assets/index";
 import Footer from "../components/Footer";
 import { privacyData } from "../config/HomePageConfig";
 
@@ -59,21 +57,21 @@ const Home = () => {
                     Politico
                 </p>
             </section>
-            <section className='flex flex-col items-center justify-center py-12 gap-10'>
-                <div className='w-full max-w-[1200px] flex flex-col md:flex-row gap-10 md:gap-5 px-5'>
-                    <div className='flex w-full lg:py-5'>
+            <section className='flex flex-col items-center justify-center py-12 md:px-20 gap-10'>
+                <div className='w-full max-w-[1400px] flex flex-col md:flex-row gap-10 md:gap-5 px-5'>
+                    <div className='flex w-full md:py-10 lg:px-20'>
                         <img
-                            src={firstimg}
+                            src={Firstimg}
                             className='object-cover w-full'
                             loading='lazy'
                         />
                     </div>
                     <div className='w-full flex flex-col gap-5 justify-center items-center md:items-start lg:px-20 lg:py-10'>
-                        <p className='font-bold text-3xl md:text-4xl text-center md:text-normal'>
+                        <p className='font-bold text-3xl md:text-4xl text-center md:text-left'>
                             Is Mozilla a corporation or a non-profit? Actually,
                             both.
                         </p>
-                        <p className='text-lg text-center'>
+                        <p className='text-lg text-center md:text-left'>
                             Mozilla consists of two organizations. The Mozilla
                             Corporation is wholly owned by the non-profit 501(c)
                             Mozilla Foundation. Which means we aren’t beholden
@@ -85,10 +83,10 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='border-t-2 w-full max-w-[1200px]'></div>
-                <div className='w-full max-w-[1200px] flex flex-col md:flex-row lg:flex-row-reverse gap-10 md:gap-5 px-5'>
-                    <div className='flex w-full lg:py-5'>
+                <div className='w-full max-w-[1400px] flex flex-col md:flex-row-reverse gap-10 md:gap-5 px-5'>
+                    <div className='flex w-full md:py-10 lg:px-20'>
                         <img
-                            src={secondimg}
+                            src={Secondimg}
                             className='object-cover w-full'
                             loading='lazy'
                         />
@@ -137,7 +135,7 @@ const Home = () => {
                     Learn more about Mozilla
                 </button>
                 <img
-                    src={dino}
+                    src={Dino}
                     className='absolute bottom-0 h-[80px] w-[80px]'
                 />
             </section>

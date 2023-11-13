@@ -1,21 +1,16 @@
-import firefoxDownload from "../assets/firefoxDownload.txt";
-import { ImFirefox } from "react-icons/im";
-import FireFoxDesktop from "../assets/FireFoxDesktop.png";
-import Accordion from "../components/Accordion";
-import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { useState } from "react";
+import {
+    FireFoxDesktop,
+    FireFoxDownload,
+    AdBlockDesktop,
+    Everyplatform,
+    AllDevice,
+    Icons,
+} from "../assets/index";
+import { Accordion, Footer } from "../components/index";
 import { Prompt } from "../components/Prompt";
-import { GiLaptop } from "react-icons/gi";
-import { FaShieldAlt } from "react-icons/fa";
-import { TbNotes } from "react-icons/tb";
-import Footer from "../components/Footer";
-import { BsApple, BsCheck2 } from "react-icons/bs";
 import { DesktopNavs, browserFeatures } from "../config/DesktopPageConfig";
-import { BsDashLg } from "react-icons/bs";
-import { IoLogoGooglePlaystore } from "react-icons/io5";
-import AdBlockDesptop from "../assets/AdBlockDesktop.jpg";
-import AllDevice from "../assets/AllDevice.jpg";
-import everyplatform from "../assets/everyplatform.svg";
+
 const DesktopFireFox = () => {
     const [openPrompt, setOpenPrompt] = useState(true);
     const [compareBrowser, setComapreBrowser] = useState(browserFeatures[1]);
@@ -50,8 +45,8 @@ const DesktopFireFox = () => {
                         key={items.header}
                         header={items.header}
                         details={items.details}
-                        icon1={<AiOutlineDown />}
-                        icon2={<AiOutlineUp />}
+                        icon1={Icons.AiOutlineDown}
+                        icon2={Icons.AiOutlineUp}
                     />
                 ))}
             </div>
@@ -59,9 +54,7 @@ const DesktopFireFox = () => {
             <div className='max-w-[1400px] grid md:grid-cols-2 gap-5 px-8 py-3 md:pt-16'>
                 <div className='flex flex-col md:pe-10 justify-between gap-10'>
                     <div className='flex gap-2 items-center text-3xl text-[#20123A]'>
-                        <div className='text-6xl'>
-                            <ImFirefox />
-                        </div>
+                        <div className='text-6xl'>{Icons.ImFirefox}</div>
                         <p>
                             <span className='font-bold'>FireFox</span> Browser
                         </p>
@@ -74,7 +67,7 @@ const DesktopFireFox = () => {
                         Just a lightning fast browser that doesn’t sell you out.
                     </p>
                     <a
-                        href={firefoxDownload}
+                        href={FireFoxDownload}
                         download='firefoxDownload'
                         className='max-w-fit w-full text-white px-5 py-2 duration-300 border-2 border-blue-600 bg-blue-600 rounded-md font-semibold'
                     >
@@ -106,9 +99,7 @@ const DesktopFireFox = () => {
                 </p>
                 <div className='flex flex-col gap-10  lg:flex-row'>
                     <div className='flex flex-col md:flex-row items-center md:items-start lg:flex-col gap-5'>
-                        <div className='text-6xl'>
-                            <GiLaptop />
-                        </div>
+                        <div className='text-6xl'>{Icons.GiLaptop}</div>
                         <div className='flex flex-col gap-9'>
                             <p className='font-bold text-2xl'>
                                 Pick up where you left off
@@ -120,9 +111,7 @@ const DesktopFireFox = () => {
                         </div>
                     </div>
                     <div className='flex flex-col md:flex-row items-center md:items-start lg:flex-col gap-5'>
-                        <div className='text-6xl'>
-                            <TbNotes />
-                        </div>
+                        <div className='text-6xl'>{Icons.TbNotes}</div>
                         <div className='flex flex-col gap-9'>
                             <p className='font-bold text-2xl'>
                                 Edit your PDFs directly
@@ -134,9 +123,7 @@ const DesktopFireFox = () => {
                         </div>
                     </div>
                     <div className='flex flex-col md:flex-row items-center md:items-start lg:flex-col gap-5'>
-                        <div className='text-6xl'>
-                            <FaShieldAlt />
-                        </div>
+                        <div className='text-6xl'>{Icons.FaShieldAlt}</div>
                         <div className='flex flex-col gap-9'>
                             <p className='font-bold text-2xl'>
                                 Pick up where you left off
@@ -200,7 +187,7 @@ const DesktopFireFox = () => {
                                         {items.featureName}
                                     </div>
                                     <div className='w-full max-w-fit text-green-600 text-3xl py-1 px-5 text-center'>
-                                        <BsCheck2 />
+                                        {Icons.BsCheck2}
                                     </div>
                                     <div>
                                         {compareBrowser.features.map((item) =>
@@ -208,11 +195,11 @@ const DesktopFireFox = () => {
                                             items.featureName ? (
                                                 item.feature ? (
                                                     <div className='w-full max-w-fit text-green-600 text-3xl py-1 px-5 text-center'>
-                                                        <BsCheck2 />
+                                                        {Icons.BsCheck2}
                                                     </div>
                                                 ) : (
                                                     <div className='w-full max-w-fit text-gray-500 text-3xl py-1 px-5 text-center'>
-                                                        <BsDashLg />
+                                                        {Icons.BsDashLg}
                                                     </div>
                                                 )
                                             ) : null
@@ -267,7 +254,7 @@ const DesktopFireFox = () => {
                     <div className='flex flex-col-reverse md:flex-row md:even:flex-row-reverse px-5 gap-10'>
                         <div className='flex w-full flex-1'>
                             <img
-                                src={AdBlockDesptop}
+                                src={AdBlockDesktop}
                                 className='object-cover'
                             />
                         </div>
@@ -288,7 +275,7 @@ const DesktopFireFox = () => {
                     <div className='flex flex-col-reverse md:flex-row md:even:flex-row-reverse px-5 gap-10'>
                         <div className='flex w-full flex-1'>
                             <img
-                                src={everyplatform}
+                                src={Everyplatform}
                                 className='object-cover w-full'
                             />
                         </div>
@@ -332,7 +319,7 @@ const DesktopFireFox = () => {
                                     className='flex px-2 rounded-md py-[2px] items-center gap-2 bg-black text-white'
                                 >
                                     <div className='text-2xl'>
-                                        <IoLogoGooglePlaystore />
+                                        {Icons.IoLogoGooglePlaystore}
                                     </div>
                                     <div className='flex flex-col justify-between'>
                                         <p className='text-[10px]'>GET IT ON</p>
@@ -344,7 +331,7 @@ const DesktopFireFox = () => {
                                     className='flex px-2 rounded-md py-[2px] items-center gap-2 bg-black text-white'
                                 >
                                     <div className='text-2xl'>
-                                        <BsApple />
+                                        {Icons.BsApple}
                                     </div>
                                     <div className='flex flex-col justify-between'>
                                         <p className='text-[10px]'>
