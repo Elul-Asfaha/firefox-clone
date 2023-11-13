@@ -1,3 +1,7 @@
+import { FaChrome, FaSafari } from "react-icons/fa";
+import { BsBrowserEdge } from "react-icons/bs";
+import { ImFirefox } from "react-icons/im";
+
 export const DesktopNavs = [
     {
         header: "Firefox for Desktop",
@@ -12,7 +16,7 @@ export const DesktopNavs = [
 export const browserFeatures = [
     {
         title: "FireFox",
-        icon: "",
+        icon: <ImFirefox />,
         features: [
             {
                 featureName: "Blocks third-party tracking cookies by default",
@@ -42,7 +46,7 @@ export const browserFeatures = [
     },
     {
         title: "Chrome",
-        icon: "",
+        icon: <FaChrome />,
         features: [
             {
                 featureName: "Blocks third-party tracking cookies by default",
@@ -71,8 +75,8 @@ export const browserFeatures = [
         ],
     },
     {
-        title: "firefox",
-        icon: "",
+        title: "Edge",
+        icon: <BsBrowserEdge />,
         features: [
             {
                 featureName: "Blocks third-party tracking cookies by default",
@@ -101,8 +105,8 @@ export const browserFeatures = [
         ],
     },
     {
-        title: "firefox",
-        icon: "",
+        title: "Safari",
+        icon: <FaSafari />,
         features: [
             {
                 featureName: "Blocks third-party tracking cookies by default",

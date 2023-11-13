@@ -31,11 +31,11 @@ const Home = () => {
                 <p className='max-w-[1000px] text-center text-4xl font-bold'>
                     Mozilla makes privacy-respecting products
                 </p>
-                <div className='grid md:grid-cols-2 xl:flex xl:justify-center gap-5 w-full'>
+                <div className='grid md:grid-cols-2  xl:flex xl:justify-center gap-10 md:gap-5 w-full'>
                     {privacyData.map((items) => (
                         <div
                             key={items.title}
-                            className='flex flex-col items-center justify-between gap-3'
+                            className='flex flex-col items-center justify-between gap-5'
                         >
                             <p className='text-5xl'>{items.icon}</p>
                             <div className='font-bold text-xl text-center max-w-[250px]'>
