@@ -7,6 +7,8 @@ export { default as Firstimg } from "./firstimg.png";
 export { default as Secondimg } from "./secondimg.png";
 export { default as AdBlockDesktop } from "./AdBlockDesktop.jpg";
 
+import { SiMozilla } from "react-icons/si";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { ImFirefox } from "react-icons/im";
 import { GiLaptop } from "react-icons/gi";
 import { FaShieldAlt } from "react-icons/fa";
@@ -38,4 +40,6 @@ export const Icons = {
     AiOutlinePlus: <AiOutlinePlus />,
     AiOutlineLoading3Quarters: <AiOutlineLoading3Quarters />,
     RxHamburgerMenu: <RxHamburgerMenu />,
+    SiMozilla: <SiMozilla />,
+    IoIosArrowRoundBack: <IoIosArrowRoundBack />,
 };
