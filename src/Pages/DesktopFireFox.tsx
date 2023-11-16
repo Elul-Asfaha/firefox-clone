@@ -9,7 +9,11 @@ import {
 } from "../assets/index";
 import { Accordion, Footer } from "../components/index";
 import { Prompt } from "../components/Prompt";
-import { DesktopNavs, browserFeatures } from "../config/DesktopPageConfig";
+import {
+    DesktopNavs,
+    browserFeatures,
+    doItWithFireFox,
+} from "../config/DesktopPageConfig";
 
 const DesktopFireFox = () => {
     const [openPrompt, setOpenPrompt] = useState(true);
@@ -89,6 +93,7 @@ const DesktopFireFox = () => {
                     <img
                         src={FireFoxDesktop}
                         className='object-container rounded-md'
+                        loading='lazy'
                     />
                 </div>
             </div>
@@ -256,6 +261,7 @@ const DesktopFireFox = () => {
                             <img
                                 src={AdBlockDesktop}
                                 className='object-cover'
+                                loading='lazy'
                             />
                         </div>
                         <div className='flex-1 flex flex-col py-10 justify-center gap-5'>
@@ -277,6 +283,7 @@ const DesktopFireFox = () => {
                             <img
                                 src={Everyplatform}
                                 className='object-cover w-full'
+                                loading='lazy'
                             />
                         </div>
                         <div className='flex-1 flex flex-col justify-center gap-5'>
@@ -300,7 +307,11 @@ const DesktopFireFox = () => {
                     </div>
                     <div className='flex flex-col-reverse md:flex-row md:even:flex-row-reverse px-5 gap-10'>
                         <div className='flex w-full flex-1'>
-                            <img src={AllDevice} className='object-cover' />
+                            <img
+                                src={AllDevice}
+                                className='object-cover'
+                                loading='lazy'
+                            />
                         </div>
                         <div className='flex-1 flex flex-col justify-center gap-5'>
                             <p className='text-3xl text-[#20123A] font-bold'>
@@ -344,6 +355,41 @@ const DesktopFireFox = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section className='py-10 w-full flex flex-col items-center px-10 gap-10 md:gap-20 md:px-20'>
+                <p className='text-center text-4xl md:text-5xl text-[#20123A]'>
+                    Do it all with Firefox
+                </p>
+                <div className='w-fit grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-x-10 lg:px-40 gap-y-10 md:gap-y-5 lg:gap-16'>
+                    {doItWithFireFox.map((item) => (
+                        <div key={item.title} className='flex flex-col gap-5'>
+                            <div className='text-4xl text-[#7542E5]'>
+                                {item.icon}
+                            </div>
+                            <div className='text-[#20123A] text-2xl font-bold'>
+                                {item.title}
+                            </div>
+                            <ul className='text-gray-700 text-lg list-disc disc-[#20123A]'>
+                                {item.list.map((items) => (
+                                    <li>{items}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+                <a
+                    href={FireFoxDownload}
+                    download='firefoxDownload'
+                    className='md:block max-w-fit text-lg w-full px-7 py-2 duration-300 border-2 text-white bg-blue-700 hover:bg-blue-800 rounded-md font-semibold'
+                >
+                    Download Firefox
+                </a>
+                <a
+                    href='#'
+                    className='text-sm mt-[-38px] md:mt-[-80px] text-center hover:underline'
+                >
+                    Firefox Privacy Notice
+                </a>
             </section>
             <Footer dark={false} />
         </div>
