@@ -26,11 +26,15 @@ const DesktopFireFox = () => {
             <div className='w-full hidden md:flex justify-center bg-[#F9F9FA]'>
                 <div className='w-full max-w-[1600px] flex items-center px-5 text-xl py-1 justify-between'>
                     {DesktopNavs.map((items) => (
-                        <div className='flex justify-between items-center w-full'>
+                        <div
+                            key={items.header}
+                            className='flex justify-between items-center w-full'
+                        >
                             <p>{items.header}</p>
                             <div className='md:flex text-lg items-center gap-4'>
                                 {items.details.map((items) => (
                                     <a
+                                        key={items.title}
                                         href={items.link}
                                         className='hover:underline'
                                     >
@@ -199,11 +203,17 @@ const DesktopFireFox = () => {
                                             item.featureName ===
                                             items.featureName ? (
                                                 item.feature ? (
-                                                    <div className='w-full max-w-fit text-green-600 text-3xl py-1 px-5 text-center'>
+                                                    <div
+                                                        key={item.featureName}
+                                                        className='w-full max-w-fit text-green-600 text-3xl py-1 px-5 text-center'
+                                                    >
                                                         {Icons.BsCheck2}
                                                     </div>
                                                 ) : (
-                                                    <div className='w-full max-w-fit text-gray-500 text-3xl py-1 px-5 text-center'>
+                                                    <div
+                                                        key={item.featureName}
+                                                        className='w-full max-w-fit text-gray-500 text-3xl py-1 px-5 text-center'
+                                                    >
                                                         {Icons.BsDashLg}
                                                     </div>
                                                 )
@@ -371,7 +381,7 @@ const DesktopFireFox = () => {
                             </div>
                             <ul className='text-gray-700 text-lg list-disc disc-[#20123A]'>
                                 {item.list.map((items) => (
-                                    <li>{items}</li>
+                                    <li key={items}>{items}</li>
                                 ))}
                             </ul>
                         </div>

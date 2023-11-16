@@ -74,10 +74,9 @@ const Accordion = ({
                             }`}
                         >
                             {details?.map((items) => (
-                                <div onClick={navToggler}>
+                                <div onClick={navToggler} key={items.title}>
                                     <Link
                                         to={items?.link}
-                                        key={items.link}
                                         className='font-semibold hover:underline flex items-center gap-2'
                                     >
                                         <span className='text-2xl'>
