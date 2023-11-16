@@ -14,7 +14,11 @@ const FooterSocials = ({ data }: footerSocialsType) => {
             <p>Follow {data.title}</p>
             <div className='flex gap-5 text-2xl items-center'>
                 {data.socials.map((items) => (
-                    <a href={items.link} key={items.link}>
+                    <a
+                        href={"https://" + items.link}
+                        key={items.link}
+                        target='_blank'
+                    >
                         {items.icon}
                     </a>
                 ))}

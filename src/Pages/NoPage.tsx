@@ -7,7 +7,7 @@ const NoPage = () => {
         navigate(-1);
     };
     return (
-        <div className='flex flex-col items-center gap-14 p-32'>
+        <div className='flex flex-col items-center gap-14 py-10 p-5 md:p-32'>
             <div className='w-full flex flex-col gap-5 max-w-[1700px]'>
                 <p className='text-5xl font-bold'>
                     Sorry, we can’t find that page

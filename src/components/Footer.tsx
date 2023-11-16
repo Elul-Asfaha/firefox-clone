@@ -38,6 +38,7 @@ const Footer = ({ dark }: footerType) => {
                                         href={items.link}
                                         key={items.title}
                                         className='font-semibold hover:underline'
+                                        target='_blank'
                                     >
                                         {items.title}
                                     </a>
